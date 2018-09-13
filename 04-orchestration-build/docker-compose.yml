@@ -1,0 +1,13 @@
+version: "3"
+services:
+  nginx:
+    image: lunchlearn:v1
+    build: .
+    ports:
+      - "8080:80"
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_ROOT_PASSWORD: "secret"
+    expose:
+      - "3306"

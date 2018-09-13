@@ -1,0 +1,13 @@
+version: "3"
+services:
+  wordpress:
+    image: wordpress:4.9-php5.6-apache
+    environment:
+      WORDPRESS_DB_HOST: "mysql"
+      WORDPRESS_DB_PASSWORD: "secret"
+    ports:
+      - "8080:80"
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "secret"
